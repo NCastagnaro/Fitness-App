@@ -1,0 +1,268 @@
+/*Here we set up dimensions for our chartBox, so that we can scale it properly*/
+/*If you do not specify width and if you don't nest the canvas tags within a specific
+div, it can scale to infinity*/ 
+.chartBox{
+    width:400px;
+    grid-area: b;
+ }
+ /*
+ .glass{
+     grid-area: d;
+ }*/
+ 
+ #macroAndWater{
+     background-color: rgba(255, 127, 80,.2);
+     display: grid;
+     grid-template-columns: repeat(5,1fr);
+     grid-template-areas: 
+     'a b c d e';
+     gap:10px;
+ }
+ #macroTable{
+    grid-area:a;
+ }
+ 
+ h1{
+     margin-left: 10px;
+ }
+ #innerMacros{
+ display: grid;
+ /*grid-template-rows: repeat(3,1fr);*/
+ padding-top: 30px;
+ gap:50px;
+ margin-left: 10px;
+ grid-template-areas: 
+ 'x'
+ 'y'
+ 'z'
+ 
+ }
+ 
+ #protein{
+     grid-area: x;
+ }
+ #carbs{
+     grid-area:y;
+ }
+ #fats{
+     grid-area:z;
+ }
+ 
+ 
+ #waterContainer{
+     text-align: center;
+ grid-area: d;
+ display: grid;
+ padding-top: 10px;
+ gap:10px;
+ margin-left: 0px;
+ grid-template-areas: 
+ 'a'
+ 'b'
+ }
+ 
+ .glass {
+     margin: 30px auto;
+     height: 300px;
+     width: 100px;
+     position: relative;
+     border-style: none solid solid solid;
+     border-width: 10px;
+     border-color: lightgray;
+     border-radius: 10px;
+ }
+ 
+ .water {
+     width: 100%;
+     height: 2%;
+     background-color: skyblue;
+     position: absolute;
+     bottom: 0;
+ }
+ 
+ #waterTable{
+     grid-area: e;
+ }
+ #innerWaterVals{
+     display: grid;
+     padding-top: 10px;
+     gap:10px;
+     margin-left: 0px;
+     grid-template-areas: 
+     'top1 top1 top2 top2'
+     'mid mid mid mid'
+     'mid2 mid2 mid3 mid3'
+     'low1 low2 low3 low4 ';
+ }
+ 
+ 
+ #waterVal{
+     grid-area: top1;
+ }
+ #waterGoal{
+     grid-area: top2;
+ }
+ #quick{
+     margin-top: 100px;
+     grid-area:mid;
+ }
+ #waterVal2{
+     grid-area:mid2;
+ }
+ #addWater{
+     grid-area:mid3;
+ }
+ #waterButton16{
+     grid-area: low1;
+ }
+ #waterButton32{
+     grid-area: low2;
+ }
+ #waterButton50{
+     grid-area: low3;
+ }
+ 
+ 
+ /*container for breakfast==================================================================/*/
+ #container0 {
+  background-color: rgb(155, 98, 98);
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  gap:10px;
+  grid-auto-rows: 50px;
+  grid-template-areas:
+  "a b c c d e f g w x y z";     /* you can't have the same letters seperated by anything. Has to be continuous. eg. can't have a a z a b b b c because the z split up the a*/
+  align-items:center;
+ }
+ #breakfastContainer{
+     display: grid;
+     grid-template-columns: 2fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+     background-color:rgb(199, 78, 78);
+     text-align: center;
+     column-gap: 0px;
+     row-gap: 5px;
+     padding: 5px;          /*helps for when we add elements, the background color is long enough, and the input fields always look nice inside of the box*/
+ 
+ }
+ 
+ #bfast{
+     grid-area: b;
+     text-align: center;
+ 
+ }
+ #addMeal{
+     grid-area: y;
+ }
+ 
+ .total{
+     grid-area: z;
+ }
+ /* ======================================================================================*/
+ 
+ 
+ /*container for lunch==================================================================/*/
+ #container1 {
+     background-color: rgb(155, 98, 98);
+     display: grid;
+     grid-template-columns: repeat(12,1fr);
+     gap:10px;
+     grid-auto-rows: 50px;
+     grid-template-areas:
+     "a b c c d e f g w x y z";     /* you can't have the same letters seperated by anything. Has to be continuous. eg. can't have a a z a b b b c because the z split up the a*/
+     align-items:center;
+    }
+    
+    #lunchContainer{
+     display: grid;
+     grid-template-columns: 2fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+     background-color:rgb(199, 78, 78);
+     text-align: center;
+     column-gap: 0px;
+     row-gap: 5px;
+     padding: 5px;          /*helps for when we add elements, the background color is long enough, and the input fields always look nice inside of the box*/
+ 
+ }
+    #lunch{
+        grid-area: b;
+        text-align: center;
+    
+    }
+    #addMeal1{
+        grid-area: y;
+    }
+    
+    .total{
+        grid-area: z;
+    }
+    /* ======================================================================================*/
+ 
+ /*container for dinner==================================================================/*/
+ #container2 {
+     background-color: rgb(155, 98, 98);
+     display: grid;
+     grid-template-columns: repeat(12,1fr);
+     gap:10px;
+     grid-auto-rows: 50px;
+     grid-template-areas:
+     "a b c c d e f g w x y z";     /* you can't have the same letters seperated by anything. Has to be continuous. eg. can't have a a z a b b b c because the z split up the a*/
+     align-items:center;
+    }
+    
+    #dinnerContainer{
+     display: grid;
+     grid-template-columns: 2fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+     background-color:rgb(199, 78, 78);
+     text-align: center;
+     column-gap: 0px;
+     row-gap: 5px;
+     padding: 5px;          /*helps for when we add elements, the background color is long enough, and the input fields always look nice inside of the box*/
+ 
+ }
+    #dinner{
+        grid-area: b;
+        text-align: center;
+    
+    }
+    #addMeal2{
+        grid-area: y;
+    }
+    
+    .total{
+        grid-area: z;
+    }
+    /* ======================================================================================*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ button{
+     width:100px;
+     height: 30px;
+     font-size: 15px;
+     color:rgb(199,78,78);
+     background-color:rgb(220, 220, 220);
+ }
+ 
+ #containerBox{
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 1fr;
+ }
+ 
+ 
+ ul{
+     list-style-type:none;       /*removes bullet points from our unordered list*/
+ }
+ 
+ 
+ #meal{
+     width: 600px;       /*created larger input box for the meal*/
+ }

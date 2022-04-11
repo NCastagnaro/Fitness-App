@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <div id = 'message'></div>
+    <input id = 'calories' type="text" placeholder="calories">
+    <button id ='submitButton'>Execute</button>
+    <div>
+<br>
+    <div id = 'message2'></div>
+    <input id = 'waterAmount' type="text" placeholder="water(oz.)">
+    <button id ='submitButton2'>Execute</button>
+    <div>
+    <!--<input id = 'protein' type="text" placeholder="protein">
+    <input id = 'carbs' type="text" placeholder="carbs">
+    <input id = 'fats' type="text" placeholder="fats">
+    <button id = 'calculate'>Calculate</button>
+    </div>-->
+
+    <div id = 'calorieTotal'></div>
+    <h1></h1>
+    <!--Here we make the myChart class so we can add properties to it.-->
+    
+<div id = 'macroAndWater'>
+    
+    <div id = 'macroTable'>
+        <h1>Macro Totals</h1>
+        <div id = 'innerMacros'>
+        <div id = 'protein'><input id = 'proteinVal' type="text" placeholder="protein"></div>
+        <div id = 'carbs'><input id = 'carbsVal' type="text" placeholder="carbs"></div>       
+        <div id = 'fats'><input id = 'fatsVal' type="text" placeholder="fats"></div>       
+        </div>
+    </div>
+
+    <div class = 'chartBox'>
+    <canvas id="myChart" ></canvas>
+    </div>
+
+    <div id = waterContainer>
+    <div id = 'remainingWater'><h2>Remaining</h2></div>
+    <div class="glass">
+        <div class="water"></div>
+    </div>
+    </div>
+
+    <div id = 'waterTable'>
+        <h1>Water Total</h1>
+            <div id = 'innerWaterVals'>
+                <div id = 'waterVal'><input id ='waterValue' type="text" placeholder="water amount"></div>
+
+                <div id = 'quick'><h3>Quick Add</h3></div>
+                <div id = 'waterVal2'><input id ='waterValue2' type="text" placeholder="enter amount"></div>
+                <div id = 'addWater'><button>Add</button></div>
+                <div id = 'waterButton16'><button>+16</button></div>
+                <div id = 'waterButton32'><button >+32</button></div>
+                <div id = 'waterButton50'><button >+50</button></div>
+
+            </div>
+    </div>
+
+</div>
+  
+<!--Breakfast---------------------------------------------------------------------->
+
+<!--<form method = "POST" action="/">-->
+
+<div id = 'container0'>
+    <div id = 'bfast'>
+        <h2>Breakfast</h2>
+    </div>
+    <div id = 'addMeal'>
+        <button type = "button">Add Meal</button>
+    </div>
+    <div class = 'total'>
+        <button >Total</button>
+
+    </div>
+</div>
+
+
+    <div id = 'breakfastContainer'>
+        <div>Meal</div>
+        <div>Protein</div>
+        <div>Carb</div>
+        <div>Fat</div>
+        <!--Need to include quotes when doing queries with strings that have spaces-->
+        <div><input type="text" name = 'meal' id = 'meal' value = '<%= data%>'></div>
+        <div><input type="text" name = 'protein' id = 'proteinInput'></div>
+        <div><input type="text" name = 'carb' id = 'carbInput'></div>
+        <div><input type="text" name = 'fat' id = 'fatInput'></div>
+    </div>
+
+<!--</form>-->
+
+<!--------------------------------------------------------------------------------------->
+<br>
+<!--Lunch----------------------------------------------------------------------------->
+<div id = 'container1'>
+    <div id = 'lunch'>
+        <h2>Lunch</h2>
+    </div>
+    <div id = 'addMeal1'>
+        <button>Add Meal</button>
+    </div>
+    <div class = 'total'>
+        <button >Total</button>
+
+    </div>
+</div>
+<div id = 'lunchContainer'>
+
+    <div>Meal</div>
+    <div>Protein</div>
+    <div>Carb</div>
+    <div>Fat</div>
+    <div><input type="text" id = 'meal'></div>
+    <div><input type="text" id = 'proteinInput'></div>
+    <div><input type="text" id = 'carbInput'></div>
+    <div><input type="text" id = 'fatInput'></div>
+</div>
+
+<!----------------------------------------------------------------------------->
+<br>
+<!--Dinner---------------------------------------------------------------->
+<div id = 'container2'>
+    <div id = 'dinner'>
+        <h2>Dinner</h2>
+    </div>
+    <div id = 'addMeal2'>
+        <button>Add Meal</button>
+    </div>
+    <div class = 'total'>
+        <button >Total</button>
+
+    </div>
+</div>
+<div id = 'dinnerContainer'>
+
+    <div>Meal</div>
+    <div>Protein</div>
+    <div>Carb</div>
+    <div>Fat</div>
+    <div><input type="text" id = 'meal'></div>
+    <div><input type="text" id = 'proteinInput'></div>
+    <div><input type="text" id = 'carbInput'></div>
+    <div><input type="text" id = 'fatInput'></div>
+</div>
+<!----------------------------------------------------------------------------------->
+
+
+<br><br><br>
+
+<p class="">Enter your nutrition information to join <strong><%=data%></strong> 
+    other users!
+    </p>
+    
+    <form method="POST" action='/register'>
+        <input type="text" name = 'userID' class="form" placeholder="Enter user ID">
+        <input type="text" name = 'calorieCount' class="form" placeholder="Enter calories for the day">
+        <button>Enter</button>
+    </form>
+
+
+
+
+
+
+    <!--Here we include the source to the Chart.js library. Make sure to include this library
+    above the link to your javaScript file-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src= "js/fitnessCode.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
