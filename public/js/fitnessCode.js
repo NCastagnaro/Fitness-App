@@ -578,6 +578,3 @@ else{
 })
 
 
-
-const messagerino = 'hello sir';
-
